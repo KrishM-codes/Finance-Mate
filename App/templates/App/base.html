@@ -1,0 +1,19 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FinanceMate</title>
+    <link rel="stylesheet" href="{% static 'navstyle.css' %}">
+    <link rel="stylesheet" href="{% static 'basestyle.css' %}">
+  </head>
+  <body style="background-color: rgb(46, 46, 46); color: rgb(184, 224, 224);">
+    <!-- <img src="{% static 'bghome.png' %}" alt="bg" style="z-index: -1; width: 100vw; position: fixed;"> -->
+  	{% include 'App/navbar.html' %}
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>

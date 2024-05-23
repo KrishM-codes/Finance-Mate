@@ -1,0 +1,365 @@
+body{
+    background-image: url('bgimg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+  }
+  
+  
+  /* === removing default button style ===*/
+  .logo {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* logo styling */
+  .logo {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    --animation-color: #00c997;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  /* this is the text, when you hover on logo */
+  .hover-logo {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  /* hover */
+  .logo:hover .hover-logo {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  }
+
+
+#dropdwn{
+    background-color: #1c2c2c;
+}
+
+#separator-dd{
+    background: #00c997;
+}
+.itemdropdown{
+    background-color: #1c2c2c;
+    
+}
+.itemdropdown a{
+    color: #fff;
+}
+
+.itemdropdown a:hover{
+    background-color: #1c2c2c;
+    color: #00c997;
+}
+
+
+
+
+
+#container{
+  margin: 20px;
+  padding-left: 50px;
+}
+
+#explabel {
+  margin: 25px;
+  font-size: 28px;
+  color: #00c997;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+#explabel:focus,
+#explabel:hover {
+  color: #00ffbf;
+}
+
+#explabel:focus:after,
+#explabel:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+#explabel:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #00ffbf;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+
+
+
+.AddBtn {
+  margin: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: #69d9d97a;
+}
+
+/* plus sign */
+.Addsign {
+  margin-top: -7px;
+  width: 100%;
+  font-size: 2em;
+  color: white;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* text */
+.Addtext {
+  margin-top: -2px;
+  /* margin-left: 50px; */
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 500;
+  transition-duration: .3s;
+}
+/* hover effect on button width */
+.AddBtn:hover {
+  background-color: #69d9d9a2;
+  width: 190px;
+  border-radius: 0px;
+  transition-duration: .3s;
+}
+
+.AddBtn:hover .Addsign {
+  margin-left: -10px;
+  width: 30%;
+  transition-duration: .3s;
+  padding-left: 20px;
+}
+/* hover effect button's Addtext */
+.AddBtn:hover .Addtext {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  padding-right: 20px;
+}
+/* button click effect*/
+.AddBtn:active {
+  transform: translate(2px ,2px);
+}
+
+
+#AddForm{
+  margin: 10px;
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 30px;
+  background-color: #dcdcdc3a;
+}
+
+#AddForm input{
+  border-radius: 7px;
+  margin: 10px 0px;
+  background-color: #ffffff3b;
+  border: none;
+  cursor: context-menu;
+}
+
+#AddForm textarea{
+  border-radius: 7px;
+  height: 30px;
+  margin: 0px 0px;
+  background-color: #ffffff3b;
+  border: none;
+  cursor: context-menu;
+}
+
+#AddForm label{
+  border-radius: 7px;
+  margin: 10px 0px;
+  margin-right: 10px;
+  font-size: 17px;
+  color: rgb(255, 255, 255);
+  border: none;
+}
+
+#modalbuttons{
+  width: 50%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+
+
+
+.delete-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.delete-svgIcon {
+  width: 15px;
+  transition-duration: 0.3s;
+}
+
+.delete-svgIcon path {
+  fill: white;
+}
+
+.delete-button:hover {
+  width: 90px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: #275656;
+  align-items: center;
+}
+
+.delete-button:hover .delete-svgIcon {
+  width: 20px;
+  transition-duration: 0.3s;
+  transform: translateY(60%);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.delete-button::before {
+  display: none;
+  content: "Delete";
+  color: white;
+  transition-duration: 0.3s;
+  font-size: 2px;
+}
+
+.delete-button:hover::before {
+  display: block;
+  padding-right: 10px;
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-duration: 0.3s;
+}
+
+
+.edit-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none !important;
+}
+
+.edit-svgIcon {
+  width: 17px;
+  transition-duration: 0.3s;
+}
+
+.edit-svgIcon path {
+  fill: white;
+}
+
+.edit-button:hover {
+  width: 80px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: #275656;
+  align-items: center;
+}
+
+.edit-button:hover .edit-svgIcon {
+  width: 20px;
+  transition-duration: 0.3s;
+  transform: translateY(60%);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.edit-button::before {
+  display: none;
+  content: "Edit";
+  color: white;
+  transition-duration: 0.3s;
+  font-size: 2px;
+}
+
+.edit-button:hover::before {
+  display: block;
+  padding-right: 10px;
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-duration: 0.3s;
+}

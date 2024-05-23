@@ -1,0 +1,136 @@
+body{
+  background-image: url('bgimg.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+
+
+/* === removing default button style ===*/
+.logo {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+/* logo styling */
+.logo {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color: #00c997;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on logo */
+.hover-logo {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.logo:hover .hover-logo {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+
+
+
+.card {
+  width: 300px;
+  padding: 1.9rem 1.2rem;
+  text-align: center;
+  background: #2a2b38;
+  border: #f2f2f2;
+  border-style: solid;
+  border-radius: 10%;
+ }
+ 
+ /*Inputs*/
+ .field {
+  margin-top: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5em;
+  background-color: #1f2029;
+  border-radius: 4px;
+  padding: .5em 1em;
+ }
+ 
+ .input-icon {
+  height: 1em;
+  width: 1em;
+  fill: #ffeba7;
+ }
+ 
+ .input-field {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #d3d3d3;
+ }
+ 
+ /*Text*/
+ .title {
+  margin-bottom: 1rem;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #f5f5f5;
+ }
+ 
+ /*Buttons*/
+ .btn {
+  margin: 1rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: .8em;
+  text-transform: uppercase;
+  padding: 0.6em 1.2em;
+  background-color: #ffeba7;
+  color: #5e6681;
+  box-shadow: 0 8px 24px 0 rgb(255 235 167 / 20%);
+  transition: all .3s ease-in-out;
+ }
+ 
+ .btn-link {
+  color: #f2f2f2;
+  display: block;
+  font-size: .75em;
+  transition: color .3s ease-out;
+ }
+ 
+ /*Hover & focus*/
+ .field input:focus::placeholder {
+  opacity: 0;
+  transition: opacity .3s;
+ }
+ 
+ .btn:hover {
+  background-color: #5e6681;
+  color: #ffeba7;
+  box-shadow: 0 8px 24px 0 rgb(16 39 112 / 20%);
+ }
+ 
+ .btn-link:hover {
+  color: #ffeba7;
+ }

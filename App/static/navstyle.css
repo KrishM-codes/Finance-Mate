@@ -1,0 +1,105 @@
+body{
+  background-image: url('bgimg.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+
+.loginbut {
+    --color: #00A97F;
+    padding: 0.8em 1.7em;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+   }
+   
+   .loginbut::before, .loginbut::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+   }
+   
+   .loginbut::before {
+    top: -1em;
+    left: -1em;
+   }
+   
+   .loginbut::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+   }
+   
+   .loginbut:hover::before, .loginbut:hover::after {
+    height: 410px;
+    width: 410px;
+   }
+   
+   .loginbut:hover {
+    color: rgb(10, 25, 30);
+   }
+   
+   .loginbut:active {
+    filter: brightness(.8);
+   }
+
+
+/* === removing default button style ===*/
+.logo {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* logo styling */
+  .logo {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    --animation-color: #00c997;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  /* this is the text, when you hover on logo */
+  .hover-logo {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  /* hover */
+  .logo:hover .hover-logo {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  }

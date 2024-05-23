@@ -1,0 +1,18 @@
+<nav>
+    <div id="navbar" style="margin: 0%;height: 12vh; display: flex; justify-content: space-between; background-color: rgba(140, 140, 140, 0.137); display: flex; justify-content: space-between; align-items: center;">
+        <div id="navleft" style="margin-left: 50px;  ">
+            <button class="logo" data-text="Awesome">
+                <span class="actual-logo">&nbsp;FinanceMate&nbsp;</span>
+                <span aria-hidden="true" class="hover-logo">&nbsp;FinanceMate&nbsp;</span>
+            </button>
+        </div>
+        <div id="navright" style=" width: 300px; display: flex; justify-content: space-around;">
+            <a href="{% url 'login' %}">
+                <button class="loginbut">Log In</button>
+            </a>
+            <a href="{% url 'signup' %}">
+                <button class="loginbut">Sign Up</button>
+            </a>
+        </div>
+    </div> 
+</nav>
